@@ -77,7 +77,7 @@ module Prawn
     # @private
     def build_image_object(file)
       #io = verify_and_open_image(file)
-      image_content = io.read
+      image_content = file.read
       image_sha1 = Digest::SHA1.hexdigest(image_content)
 
       # if this image has already been embedded, just reuse it
